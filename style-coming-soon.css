@@ -1,0 +1,82 @@
+
+/*============================================================ 
+準備中ページ
+ ============================================================*/
+ /* 基本設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+    color: #333;
+    background-color: #D9E9E6; /* メインのミントグリーン */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background-color: #F9F6F1; /* メインのベージュ */
+    padding: 80px 40px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 2px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.brand-name {
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 30px;
+}
+
+.divider {
+    width: 40px;
+    height: 1px;
+    background-color: #333;
+    margin: 0 auto 30px;
+}
+
+.message {
+    font-size: 0.95rem;
+    line-height: 2;
+    margin-bottom: 40px;
+    color: #444;
+}
+
+/* ボタン（サイトの雰囲気に合わせたシンプルスタイル） */
+.back-link {
+    display: inline-block;
+    padding: 12px 40px;
+    border: 1px solid #333;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #333;
+    color: #fff;
+}

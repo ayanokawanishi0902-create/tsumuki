@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tsumuki-つむき- | WEB DESIGN STUDIO</title>
+	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- Google Fonts 読み込み -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body id="contact">
+
+	<!-- ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+	 ヘッダー領域
+	 ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
+	<header>
+		<div class="header-container">
+			<a href="../index.html">
+				<h1>TSUMUKI<span>&nbsp;-&nbsp;つむき&nbsp;-</span></h1>
+			</a>
+
+			<div class="hamburger" id="js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav id="js-nav">
+				<ul class="grobal-nav">
+					<li><a href="../index.html">HOME</a></li>
+					<li><a href="../index.html#service">SERVICE</a></li>
+					<li><a href="../soon.html">WORKS</a></li>
+					<li><a href="../soon.html">NEWS</a></li>
+					<li><a href="index.html" aria-current="page">お問い合わせ</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<!-- ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊メイン領域＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
+	<main>
+		<!-- ********************お問い合わせフォーム******************** -->
+<section class="contact-section">
+  <div class="container">
+    <h2 class="section-title">CONTACT</h2>
+    <p class="section-subtitle">
+			制作のご依頼・ご相談など、お気軽にお問い合わせください。<br>
+			具体的なイメージがなくても大丈夫です。<br>
+			お悩みをそのままお聞かせください。
+		</p>
+
+    <form action="https://ssgform.com/s/tRD8QFC2WDVn" method="post" class="contact-form">
+      
+      <div class="form-group">
+        <label for="company">会社名</label>
+        <input type="text" id="company" name="会社名" placeholder="例：株式会社○○○">
+      </div>
+
+			<div class="form-group">
+				<label for="name">お名前（ご担当者）<span>必須</span></label>
+				<input type="text" id="name" name="お名前" placeholder="例：紬木 彩斗" required>
+			</div>
+
+      <div class="form-group">
+        <label for="email">メールアドレス<span>必須</span></label>
+        <input type="email" id="email" name="メールアドレス" placeholder="example@mail.com" required>
+      </div>
+
+		  <div class="form-group">
+        <label for="hp">現行WebサイトのURL（あれば）</label>
+        <input type="url" id="hp" name="現行サイト" placeholder="https://www.example.com">
+      </div>
+
+      <div class="form-group">
+        <label for="type">お問い合わせ内容<span>必須</span></label>
+        <select id="type" name="お問い合わせ種類" required>
+          <option value="">選択してください</option>
+          <option value="サイト制作">Webサイトのご相談</option>
+          <option value="LP相談">LPのご相談</option>
+          <option value="Web広告">Web広告のご相談</option>
+          <option value="ライティング">SEO記事制作のご相談</option>
+          <option value="その他">その他</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">メッセージ本文</label>
+        <textarea id="message" name="内容" rows="6" placeholder="ご自由にご入力ください"></textarea>
+      </div>
+
+			<div class="form-agreement">
+				<input type="checkbox" id="agree" name="同意" required>
+				<label for="agree">
+					<a href="privacy.html" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>に同意する
+				</label>
+			</div>
+						
+      <div class="form-submit">
+        <button type="submit" class="submit-btn">この内容で送信する</button>
+      </div>
+			
+			<p class="form-note">
+				※通常2〜3営業日以内にご返信いたします。<br>
+				※3日以上経過しても返信がない場合は、メールの不達の可能性がございます。<br>
+				お手数ですが再度お問い合わせいただくか、SNS等よりご連絡ください。
+			</p>
+
+    </form>
+  </div>
+</section>
+
+	</main>
+
+	<!-- ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+	 フッター領域
+	 ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
+	<footer class="footer">
+		<!-- ↑TOPへ戻るボタン -->
+		<a href="#top">
+			<button class="top-btn">
+				<svg class="svgIcon" viewBox="0 0 384 512">
+					<path
+						d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+					</path>
+				</svg>
+			</button>
+		</a>
+
+		<div class="footer-container">
+			<!-- ロゴ・名前エリア -->
+			<div class="footer_brand">
+    	  <div class="footer_logo">TSUMUKI&nbsp;<span>-&nbsp;つむき&nbsp;-</span></div>
+    	  <p class="footer_tagline">想いを紡ぎ、価値を積み上げるWeb制作</p>
+    	</div>
+
+			<!-- フッター情報エリア -->
+			<div class="footer__main">
+				<details open class="footer__accordion">
+					<summary>サービス・料金</summary>
+					<ul>
+						<li><a href="#">-Webサイト(HP)制作</a></li>
+						<li><a href="#">-LP設計・制作</a></li>
+						<li><a href="#">-WEB広告運用</a></li>
+						<li><a href="#">-SEO記事制作</a></li>
+						<li><a href="#">-【期間限定】キャンペーン</a></li>
+					</ul>
+				</details>
+				
+				<details open class="footer__accordion">
+					<summary>コンセプト</summary>
+					<ul>
+						<li><a href="#">-TSUMUKIが提供する価値</a></li>
+						<li><a href="#">-代表者メッセージ</a></li>
+					</ul>
+				</details>
+
+				<details open class="footer__accordion">
+					<summary>ポートフォリオ・実績</summary>
+					<ul>
+						<li><a href="#">-制作一覧</a></li>
+						<li><a href="#">-お客様の声</a></li>
+					</ul>
+				</details>
+
+				<details open class="footer__accordion">
+					<summary>インフォメーション</summary>
+					<ul>
+						<li><a href="#">-よくあるご質問</a></li>
+						<li><a href="#">-NEWS・キャンペーン</a></li>
+						<li><a href="#">-お問い合わせ</a></li>
+					</ul>
+				</details>	
+
+			</div>
+
+			<div class="footer__sub">
+				<nav class="footer__sub-nav">
+					<a href="#">事業概要</a>
+					<a href="#">プライバシーポリシー</a>
+				</nav>
+				<p class="copyright">&copy; 2026 TSUMUKI</p>
+			</div>
+
+		</div>	<!--/.footer-container-->
+
+		
+		<!-- ********************JavaScript******************** -->
+		<script src="../js/hamburger.js"></script>
+		<script src="../js/smart-header.js"></script>
+
+		<!-- フッターのサイトマップアコーディオン：スマホ表示のみ閉じておくためのJS -->
+		<script>
+			if (window.innerWidth <= 767) {
+				document.querySelectorAll('.footer__accordion').forEach(el => el.removeAttribute('open'));
+			}
+		</script>
+
+	</footer>
+</body>
+</html>
