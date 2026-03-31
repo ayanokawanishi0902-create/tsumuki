@@ -1,0 +1,232 @@
+/* 色の定義（tsumuki専用） */
+$my-mint: #D1E6E3;
+$my-kinari: #fdfaf5;
+$my-gold: #c4a45d;
+$my-gold-light: #e6d3a3;
+
+
+/*============================================================
+ 創業記念キャンペーン============================================================*/
+/* ------------------------------------------
+ キャンペーン用特設ページ
+ ------------------------------------------ */
+#cp1 {
+	background-color: #ece5e0;
+}
+.campaign-container {
+	width: 100%;
+	max-width: 700px;
+	margin: 70px auto 0;
+	padding-bottom: 30px;
+  background: linear-gradient(to bottom right, #ffffff, #ece5e0);
+		
+	.flower img {
+		width: 100%;
+		height: 80px;
+		object-fit: cover;
+		opacity: 0.8;
+	}
+	.cp-text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		p {
+			width: 90%;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		p.jouken {
+			border: 1px solid #f9cc37;
+			padding: 10px;
+			margin-top: 10px;
+			font-size: 12px;
+			line-height: 1.5rem;
+		}
+	}
+	h3 {
+		text-align: center;
+		color: #f9cc37;
+		font-size: 1.7rem;
+		display: inline-block;
+		border-bottom: 1px solid #f9cc37;
+		padding-bottom: 5px;
+	}
+	.date {
+		padding: 10px;
+		font-size: 1.5rem;
+	}
+	.date span {
+		font-size: 1rem;
+	}
+	.small {
+		text-align: end;
+		padding: 5px 30px 30px;
+		font-size: small;
+	}
+}
+/* 価格エリアの調整 */
+.price-area {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 5px; /* 数字同士の間隔 */
+  font-weight: bold;
+  color: #bfa46f; /* 画像の文字色に合わせた色味 */
+}
+/* 旧価格（打ち消し線） */
+.old-price {
+  position: relative;
+  font-size: 1.2rem; /* 少し小さめに */
+  color: #999; /* 打ち消しなので少し薄く */
+}
+/* 斜めの打ち消し線 */
+.old-price::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  width: 90%;
+  height: 1px;
+  background-color: #bfa46f;
+  transform: rotate(-15deg);
+  transform-origin: center;
+}
+/* 新価格 */
+.price-area .new-price {
+  font-size: 2.5rem; /* 目立たせるために大きく */
+}
+/* 「→」の文字サイズ調整 */
+.price-area span {
+	font-size: 1.5rem;
+}
+/* 「万円〜」の文字サイズ調整 */
+.price-area span span {
+  font-size: 1rem;
+}
+
+
+.cp-plan-card {
+	width: 90%;
+	margin: 20px auto 0px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px 20px 20px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.05);
+	position: relative; /* バッジの基準点 */
+
+  &__label {
+    display: inline-block;
+    background: #f9cc37;
+    color: #fff;
+    font-size: 1rem;
+    padding: 2px 12px;
+    border-radius: 20px;
+		margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    color: #333;
+  }
+	
+	&__list {
+    text-align: left;
+    display: inline-block;
+    margin: 20px;
+    list-style: none;
+    padding: 0;
+    li {
+      margin-bottom: 5px;
+      font-size: 0.95rem;
+      &::before {
+        content: "✓";
+        color: $my-gold;
+        margin-right: 8px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+/* 2. リボンバッジ（本体）のデザイン */
+.ribbon-badge {
+  position: absolute;
+  top: 0;           /* カードの最上部に合わせる */
+  right: 20px;       /* 右側の余白 */
+  width: 60px;       /* リボンの横幅 */
+  height: 90px;      /* リボンの縦幅（V字部分を含む） */
+  color: #333;       /* 文字色 */
+  z-index: 10;
+  
+  /* グラデーションで金色の質感を再現 */
+  background: linear-gradient(to right, #f9e1a0 0%, #eac25d 50%, #f9e1a0 100%);
+  
+  /* テキストを中央寄せ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* 3. リボンの下のV字カットを再現（CSSの擬似要素を使用） */
+.ribbon-badge::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  
+  /* 三角形の配置で切り欠きを作る */
+  border-left: 30px solid transparent;  /* 横幅の半分 (70px/2) */
+  border-right: 30px solid transparent; /* 横幅の半分 */
+  border-bottom: 20px solid #fff;    /* カードの背景色と合わせる */
+}
+
+/* 4. リボン内のテキスト調整 */
+.ribbon-badge span {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.ribbon-badge strong {
+  font-size: 32px; /* 数字だけ大きく */
+  font-weight: bold;
+  margin: 0 2px;
+}
+
+
+// 開業記念キャンペーンページのFAQ
+#cp1 {
+	.faq_section {
+		padding: 30px 0 0;
+		background-color: #fff;
+	}
+	.faq_section {
+		max-width: 700px;
+		margin: 0 auto;
+	}
+	main {
+		padding-bottom: 30px;
+	}
+	.footer {
+		margin-top: 0;
+	}
+	.c-button-gold {
+		margin-bottom: 0;
+	}
+}
+
+/* ------------------------------------------
+ キャンペーン専用フォーム
+ ------------------------------------------ */
+body#cp-contact {
+  background: linear-gradient(to bottom right, #ffffff, #ece5e0);
+
+	.section-subtitle {
+		line-height: 1.8rem;
+	}
+
+}

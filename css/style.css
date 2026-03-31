@@ -274,6 +274,17 @@ footer {
   right: 20px;
   bottom: 20px;
   z-index: 1000;
+  /* 初期状態（隠す） */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+
+/* 追加：スクロールされた時に付与するクラス */
+.top-btn.is-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .svgIcon {
@@ -285,35 +296,33 @@ footer {
   fill: #fff;
 }
 
-.top-btn:hover {
-  width: 100px;
-  transition-duration: 0.3s;
-  background-color: #333;
-  align-items: center;
+@media (hover: hover) {
+  .top-btn:hover {
+    width: 100px;
+    transition-duration: 0.3s;
+    background-color: #333;
+    align-items: center;
+  }
+  .top-btn:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+  }
+  .top-btn::before {
+    position: absolute;
+    bottom: -20px;
+    content: "トップへ戻る";
+    font-weight: 400;
+    color: #fcfcf6;
+    font-size: 0px;
+  }
+  .top-btn:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    transition-duration: 0.3s;
+  }
 }
-
-.top-btn:hover .svgIcon {
-  /* width: 20px; */
-  transition-duration: 0.3s;
-  transform: translateY(-200%);
-}
-
-.top-btn::before {
-  position: absolute;
-  bottom: -20px;
-  content: "トップへ戻る";
-  font-weight: 400;
-  color: #fcfcf6;
-  font-size: 0px;
-}
-
-.top-btn:hover::before {
-  font-size: 13px;
-  opacity: 1;
-  bottom: unset;
-  transition-duration: 0.3s;
-}
-
 /* -------------　ブランドエリア　------------- */
 .footer_brand a {
   color: #333;
@@ -523,7 +532,7 @@ TOPページの設定ここから ==============================================
 
 @keyframes fvAppear {
   to {
-    opacity: 0.8;
+    opacity: 0.9;
     transform: scale(1);
     filter: blur(0);
   }
@@ -562,7 +571,7 @@ TOPページの設定ここから ==============================================
   .fv-img {
     width: 100%;
     max-width: 100%;
-    opacity: 0.8;
+    opacity: 0.9;
     margin: 0;
   }
 }
@@ -608,7 +617,7 @@ TOPページの設定ここから ==============================================
     pointer-events: none;
   }
   .fv-copy {
-    font-size: 2rem;
+    font-size: 2.1rem;
     line-height: 1.3;
     margin-left: 10px;
   }
@@ -620,16 +629,43 @@ TOPページの設定ここから ==============================================
   }
   .fv-lead {
     position: absolute;
-    bottom: 10%; /* 画像の下の方に配置 */
+    bottom: 5%; /* 画像の下の方に配置 */
     left: 20px; /* 左端からの距離 */
     margin-top: 0; /* absoluteにしたのでmarginはリセット */
     font-size: 0.85rem;
     color: #666;
-    background: rgba(255, 255, 255, 0.4); /* 背景を少しだけ白くして文字を浮かせる */
     padding: 2px 8px;
     border-radius: 2px;
   }
 }
+/* ------------------------------------------
+ 帯section
+ ------------------------------------------ */
+.obi {
+  height: 30px;
+  line-height: 30px;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  font-family: "Yu Mincho", serif;
+  font-size: 12px;
+}
+
+/* ------------------------------------------
+ キャンペーン・バナーsection
+ ------------------------------------------ */
+.CP_bnr {
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  margin: 30px auto 0;
+  box-shadow: 3px 3px 10px rgba(151, 180, 175, 0.4);
+}
+.CP_bnr a img {
+  display: block;
+}
+
 /* ------------------------------------------
  サービス一覧section
  ------------------------------------------ */
@@ -639,8 +675,8 @@ TOPページの設定ここから ==============================================
 
 /* 横並び4列 */
 .service-wrapper {
-  max-width: 900px;
-  width: 95%;
+  max-width: 1100px;
+  width: 100%;
   margin: 50px auto 80px auto;
   display: flex;
   gap: 20px;
@@ -770,7 +806,7 @@ TOPページの設定ここから ==============================================
     padding: 0 10px; /* 内側の余白を少し詰める */
   }
   .service-item h3 {
-    font-size: 14px;
+    font-size: 18px;
     margin: 15px 0 8px 0;
   }
   .service-item p {
@@ -782,6 +818,37 @@ TOPページの設定ここから ==============================================
     padding: 6px 12px;
   }
 }
+/* ------------ 受付停止中のサービス------------ */
+.service-item {
+  position: relative; /* 幕を配置する基準になります */
+}
+
+/* オーバーレイ */
+.service-item.is-closed::after {
+  content: "受付停止中";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* 黒の60%透明 */
+  color: #fff; /* 白文字 */
+  font-weight: bold;
+  font-size: 18px;
+  display: flex; /* 文字を中央寄せにするため */
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+  z-index: 10; /* 一番上に表示 */
+  border-radius: 8px; /* カードの角丸に合わせる */
+}
+
+/* 受付停止中はボタンを押せないようにする場合（オプション） */
+.service-item.is-closed {
+  pointer-events: none; /* クリックを無効化 */
+  cursor: not-allowed;
+}
+
 /* ------------------------------------------
  私の強みセクション
  ------------------------------------------ */
@@ -1116,6 +1183,7 @@ a.works-item {
   position: relative;
   width: 20px;
   height: 20px;
+  flex-shrink: 0;
 }
 
 .icon::before,
@@ -1125,10 +1193,11 @@ a.works-item {
   top: 50%;
   left: 50%;
   width: 100%;
-  height: 1px;
+  height: 1.5px;
   background-color: #333;
   transform: translate(-50%, -50%);
   transition: transform 0.3s ease;
+  border-radius: 1px;
 }
 
 .icon::after {
@@ -1602,4 +1671,305 @@ textarea#message {
 /* ドット（ページネーション）の色をゴールドに */
 .swiper-pagination-bullet-active {
   background: #c4a45d !important;
+}
+
+/* 色の定義（tsumuki専用） */
+/*============================================================
+ 創業記念キャンペーン============================================================*/
+/* ------------------------------------------
+ キャンペーン用特設ページ
+ ------------------------------------------ */
+#cp1 {
+  background-color: #ece5e0;
+}
+
+.campaign-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 70px auto 0;
+  padding-bottom: 30px;
+  background: linear-gradient(to bottom right, #ffffff, #ece5e0);
+}
+.campaign-container .flower img {
+  width: 100%;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.8;
+}
+.campaign-container .cp-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.campaign-container .cp-text p {
+  width: 90%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.campaign-container .cp-text p.jouken {
+  border: 1px solid #f9cc37;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.5rem;
+}
+.campaign-container h3 {
+  text-align: center;
+  color: #f9cc37;
+  font-size: 1.7rem;
+  display: inline-block;
+  border-bottom: 1px solid #f9cc37;
+  padding-bottom: 5px;
+}
+.campaign-container .date {
+  padding: 10px;
+  font-size: 1.5rem;
+}
+.campaign-container .date span {
+  font-size: 1rem;
+}
+.campaign-container .small {
+  text-align: end;
+  padding: 5px 30px 30px;
+  font-size: small;
+}
+
+/* 価格エリアの調整 */
+.price-area {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 5px; /* 数字同士の間隔 */
+  font-weight: bold;
+  color: #bfa46f; /* 画像の文字色に合わせた色味 */
+}
+
+/* 旧価格（打ち消し線） */
+.old-price {
+  position: relative;
+  font-size: 1.2rem; /* 少し小さめに */
+  color: #999; /* 打ち消しなので少し薄く */
+}
+
+/* 斜めの打ち消し線 */
+.old-price::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  width: 90%;
+  height: 1px;
+  background-color: #bfa46f;
+  transform: rotate(-15deg);
+  transform-origin: center;
+}
+
+/* 新価格 */
+.price-area .new-price {
+  font-size: 2.5rem; /* 目立たせるために大きく */
+}
+
+/* 「→」の文字サイズ調整 */
+.price-area span {
+  font-size: 1.5rem;
+}
+
+/* 「万円〜」の文字サイズ調整 */
+.price-area span span {
+  font-size: 1rem;
+}
+
+.cp-plan-card {
+  width: 90%;
+  margin: 20px auto 0px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px 20px 20px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative; /* バッジの基準点 */
+}
+.cp-plan-card__label {
+  display: inline-block;
+  background: #f9cc37;
+  color: #fff;
+  font-size: 1rem;
+  padding: 2px 12px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+.cp-plan-card__title {
+  font-size: 1.5rem;
+  color: #333;
+}
+.cp-plan-card__list {
+  text-align: left;
+  display: inline-block;
+  margin: 20px;
+  list-style: none;
+  padding: 0;
+}
+.cp-plan-card__list li {
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+.cp-plan-card__list li::before {
+  content: "✓";
+  color: #c4a45d;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+/* 2. リボンバッジ（本体）のデザイン */
+.ribbon-badge {
+  position: absolute;
+  top: 0; /* カードの最上部に合わせる */
+  right: 20px; /* 右側の余白 */
+  width: 60px; /* リボンの横幅 */
+  height: 90px; /* リボンの縦幅（V字部分を含む） */
+  color: #333; /* 文字色 */
+  z-index: 10;
+  /* グラデーションで金色の質感を再現 */
+  background: linear-gradient(to right, #f9e1a0 0%, #eac25d 50%, #f9e1a0 100%);
+  /* テキストを中央寄せ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* 3. リボンの下のV字カットを再現（CSSの擬似要素を使用） */
+.ribbon-badge::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  /* 三角形の配置で切り欠きを作る */
+  border-left: 30px solid transparent; /* 横幅の半分 (70px/2) */
+  border-right: 30px solid transparent; /* 横幅の半分 */
+  border-bottom: 20px solid #fff; /* カードの背景色と合わせる */
+}
+
+/* 4. リボン内のテキスト調整 */
+.ribbon-badge span {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.ribbon-badge strong {
+  font-size: 32px; /* 数字だけ大きく */
+  font-weight: bold;
+  margin: 0 2px;
+}
+
+#cp1 .faq_section {
+  padding: 30px 0 0;
+  background-color: #fff;
+}
+#cp1 .faq_section {
+  max-width: 700px;
+  margin: 0 auto;
+}
+#cp1 main {
+  padding-bottom: 30px;
+}
+#cp1 .footer {
+  margin-top: 0;
+}
+#cp1 .c-button-gold {
+  margin-bottom: 0;
+}
+
+/* ------------------------------------------
+ キャンペーン専用フォーム
+ ------------------------------------------ */
+body#cp-contact {
+  background: linear-gradient(to bottom right, #ffffff, #ece5e0);
+}
+body#cp-contact .section-subtitle {
+  line-height: 1.8rem;
+}
+
+.info {
+  margin-top: 70px;
+}
+
+/* 事業概要セクション全体のスタイル */
+.business-summary {
+  padding: 40px 20px;
+  background-color: #fff; /* 背景色 */
+  color: #333;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+.summary-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.summary-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  letter-spacing: 0.1em;
+  font-family: "Cinzel", serif;
+}
+
+/* テーブルのスタイル */
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid #e6d3a3;
+}
+
+.summary-table th,
+.summary-table td {
+  padding: 20px;
+  border-bottom: 1px solid #e6d3a3;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.summary-table th {
+  width: 30%;
+  text-align: left;
+  background-color: #f8f6f2;
+  font-weight: 600;
+  color: #555;
+}
+
+/* 事業内容のリスト */
+.summary-table ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.summary-table li {
+  margin-bottom: 4px;
+}
+
+/* モバイル対応（画面が狭い時に縦に並べる） */
+@media (max-width: 600px) {
+  .summary-table {
+    border-top: 1px solid #D1E6E3;
+  }
+  .summary-table th,
+  .summary-table td {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #D1E6E3;
+  }
+  .summary-table th {
+    padding-bottom: 5px;
+    background-color: transparent;
+    color: #D1E6E3;
+  }
+  .summary-table td {
+    padding-top: 5px;
+    padding-bottom: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

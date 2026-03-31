@@ -1,0 +1,82 @@
+.info {
+	margin-top: 70px;
+}
+
+
+/* 事業概要セクション全体のスタイル */
+.business-summary {
+  padding:40px 20px;
+  background-color: #fff; /* 背景色 */
+  color: #333;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+.summary-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.summary-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  letter-spacing: 0.1em;
+	font-family: "Cinzel", serif;
+}
+
+/* テーブルのスタイル */
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid #e6d3a3;
+}
+
+.summary-table th, 
+.summary-table td {
+  padding: 20px;
+  border-bottom: 1px solid #e6d3a3;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.summary-table th {
+  width: 30%;
+  text-align: left;
+  background-color: #f8f6f2;
+  font-weight: 600;
+  color: #555;
+}
+
+/* 事業内容のリスト */
+.summary-table ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.summary-table li {
+  margin-bottom: 4px;
+}
+
+/* モバイル対応（画面が狭い時に縦に並べる） */
+@media (max-width: 600px) {
+  .summary-table {
+	  border-top: 1px solid #D1E6E3;
+	}
+	
+	.summary-table th, 
+  .summary-table td {
+    display: block;
+    width: 100%;
+		border-bottom: 1px solid #D1E6E3;
+  }
+  .summary-table th {
+    padding-bottom: 5px;
+    background-color: transparent;
+    color: #D1E6E3;
+  }
+  .summary-table td {
+    padding-top: 5px;
+    padding-bottom: 20px;
+  }
+}
