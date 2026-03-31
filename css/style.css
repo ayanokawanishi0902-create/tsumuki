@@ -164,6 +164,23 @@ header nav ul {
   bottom: 0;
 }
 
+/* 1番目の線を45度回転させて「右下がり」の線にする */
+.hamburger.active span:nth-child(1) {
+  top: 11px;
+  transform: rotate(45deg);
+}
+
+/* 2番目の線を透明にして消す */
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+/* 3番目の線を-45度回転させて「右上がり」の線にする */
+.hamburger.active span:nth-child(3) {
+  top: 11px;
+  transform: rotate(-45deg);
+}
+
 /* --------------タブレット：2段表示 ------------- */
 @media (max-width: 800px) and (min-width: 481px) {
   header .header-container {
