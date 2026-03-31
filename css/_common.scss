@@ -443,18 +443,17 @@ TOPページの設定ここから ==============================================
 .fv {
   position: relative;
   width: 100%;
+  height: auto;
   background-color: #D1E6E3;
   overflow: hidden;
-  margin-top: 70px;
 }
 .fv-inner {
-  max-width: 1200px;
+  max-width: 100vw;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   position: relative;
-  padding: 0 5%; /* 上下に少し余白を持たせて、SERVICEとの距離を保つ */
 }
 .fv-content {
   position: absolute;
@@ -489,7 +488,7 @@ TOPページの設定ここから ==============================================
 }
 .fv-img {
   width: 60%;
-  max-width: 600px;
+  max-width: 700px;
 }
 .fv-img img {
   width: 100%;
@@ -607,6 +606,19 @@ TOPページの設定ここから ==============================================
     padding: 2px 8px;
     border-radius: 2px;
   }
+  .fv-img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    aspect-ratio: 4/ 5;
+    overflow: hidden;
+  }
+  .fv-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 70%;
+  }
 }
 
 /* ------------------------------------------
@@ -627,7 +639,7 @@ TOPページの設定ここから ==============================================
  キャンペーン・バナーsection
  ------------------------------------------ */
 .CP_bnr {
-  width: 80%;
+  width: 90%;
   max-width: 600px;
   display: flex;
   justify-content: center;
@@ -903,7 +915,6 @@ TOPページの設定ここから ==============================================
  ------------------------------------------ */
 /* 前のセクションの設定（隙間が出ないようにする） */
 .works_section {
-  background-color: #D1E6E3;
   position: relative;
   z-index: 10;
   padding: 50px 0 0;
@@ -988,7 +999,8 @@ TOPページの設定ここから ==============================================
    実績一覧セクション（WORKS）
    ----------------------------------------------------------- */
 .works_section {
-  padding: 50px 0 0;
+  padding: 50px 0 30px;
+  background-color: #fdfaf5; /* キナリ色 */
 }
 /* 親要素：隙間を調整 */
 .works-wrapper {
@@ -1027,6 +1039,14 @@ a.works-item {
   color: #666;
   margin-bottom: 10px;
 }
+p.works_category_tag {
+  background-color: #999;
+  color: #fff;
+  display: inline-block;
+  padding: 3px 10px;
+  text-align: center;
+  border-radius: 8px;
+}
 /* readmoreボタンの微調整 */
 .readmore-btn {
   font-size: 12px;
@@ -1044,7 +1064,7 @@ a.works-item {
 /* ----------- スマホ：2列表示 ---------- */
 @media (max-width: 768px) {
   .works_section {
-    padding: 50px 0 0;
+    padding: 50px 0 30px;
   }
   .works-wrapper {
     margin: 30px auto 30px;
@@ -1070,6 +1090,15 @@ a.works-item {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+  p.works_category_tag {
+    background-color: #999;
+    color: #fff;
+    font-size: 10px;
+    display: inline-block;
+    padding: 3px 8px;
+    text-align: center;
+    border-radius: 8px;
   }
   .readmore-btn {
     font-size: 11px;
