@@ -44,73 +44,73 @@
 	<!-- ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊メイン領域＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
 	<main>
 		<!-- ********************お問い合わせフォーム******************** -->
-<section class="contact-section">
-  <div class="container">
-    <h2 class="section-title">CONTACT</h2>
-    <p class="section-subtitle">
-			【開業記念キャンペーン専用】
-		</p>
-		<p>
-			具体的なイメージがなくても大丈夫です。<br>
-			お悩みをそのままお聞かせください。
-		</p>
+		<section class="contact-section">
+			<div class="container">
+				<h2 class="section-title">CONTACT</h2>
+				<p class="section-subtitle">
+					【開業記念キャンペーン専用】
+				</p>
+				<p>
+					具体的なイメージがなくても大丈夫です。<br>
+					お悩みをそのままお聞かせください。
+				</p>
 
-    <form action="https://ssgform.com/s/tRD8QFC2WDVn" method="post" class="contact-form">
-      
-      <div class="form-group">
-        <label for="company">会社名・店名・屋号</label>
-        <input type="text" id="company" name="会社名" placeholder="例：株式会社○○○">
-      </div>
+				<form action="https://ssgform.com/s/tRD8QFC2WDVn" method="post" class="contact-form">
+					
+					<div class="form-group">
+						<label for="company">会社名・店名・屋号</label>
+						<input type="text" id="company" name="会社名" placeholder="例：株式会社○○○">
+					</div>
 
-			<div class="form-group">
-				<label for="name">お名前（ご担当者）<span>必須</span></label>
-				<input type="text" id="name" name="お名前" placeholder="例：紬木 彩斗" required>
+					<div class="form-group">
+						<label for="name">お名前（ご担当者）<span>必須</span></label>
+						<input type="text" id="name" name="お名前" placeholder="例：紬木 彩斗" required>
+					</div>
+
+					<div class="form-group">
+						<label for="email">メールアドレス<span>必須</span></label>
+						<input type="email" id="email" name="メールアドレス" placeholder="example@mail.com" required>
+					</div>
+
+					<div class="form-group">
+						<label for="hp">現行WebサイトのURL（あれば）</label>
+						<input type="url" id="hp" name="現行サイト" placeholder="https://www.example.com">
+					</div>
+
+					<div class="form-group">
+						<label for="type">お問い合わせ内容<span>必須</span></label>
+						<select id="type" name="お問い合わせ種類" required>
+							<option value="">選択してください</option>
+							<option value="サイト制作(開業CP)" selected>【開業記念CP】Webサイト制作のご相談</option>
+							<option value="その他">その他</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label for="message">メッセージ本文</label>
+						<textarea id="message" name="内容" rows="6" placeholder="ご自由にご入力ください"></textarea>
+					</div>
+
+					<div class="form-agreement">
+						<input type="checkbox" id="agree" name="同意" required>
+						<label for="agree">
+							<a href="../privacy.html" id="js-modal-open" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>に同意する
+						</label>
+					</div>
+								
+					<div class="form-submit">
+						<button type="submit" class="submit-btn">この内容で送信する</button>
+					</div>
+					
+					<p class="form-note">
+						※通常2〜3営業日以内にご返信いたします。<br>
+						※3日以上経過しても返信がない場合は、メールの不達の可能性がございます。<br>
+						お手数ですが再度お問い合わせいただくか、SNS等よりご連絡ください。
+					</p>
+
+				</form>
 			</div>
-
-      <div class="form-group">
-        <label for="email">メールアドレス<span>必須</span></label>
-        <input type="email" id="email" name="メールアドレス" placeholder="example@mail.com" required>
-      </div>
-
-		  <div class="form-group">
-        <label for="hp">現行WebサイトのURL（あれば）</label>
-        <input type="url" id="hp" name="現行サイト" placeholder="https://www.example.com">
-      </div>
-
-      <div class="form-group">
-        <label for="type">お問い合わせ内容<span>必須</span></label>
-        <select id="type" name="お問い合わせ種類" required>
-          <option value="">選択してください</option>
-          <option value="サイト制作(開業CP)" selected>【開業記念CP】Webサイト制作のご相談</option>
-          <option value="その他">その他</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="message">メッセージ本文</label>
-        <textarea id="message" name="内容" rows="6" placeholder="ご自由にご入力ください"></textarea>
-      </div>
-
-			<div class="form-agreement">
-				<input type="checkbox" id="agree" name="同意" required>
-				<label for="agree">
-					<a href="privacy.html" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>に同意する
-				</label>
-			</div>
-						
-      <div class="form-submit">
-        <button type="submit" class="submit-btn">この内容で送信する</button>
-      </div>
-			
-			<p class="form-note">
-				※通常2〜3営業日以内にご返信いたします。<br>
-				※3日以上経過しても返信がない場合は、メールの不達の可能性がございます。<br>
-				お手数ですが再度お問い合わせいただくか、SNS等よりご連絡ください。
-			</p>
-
-    </form>
-  </div>
-</section>
+		</section>
 
 	</main>
 
@@ -185,19 +185,73 @@
 			</div>
 
 		</div>	<!--/.footer-container-->
+  </footer>
 
-		
-		<!-- ********************JavaScript******************** -->
-		<script src="../js/hamburger.js"></script>
-		<script src="../js/smart-header.js"></script>
+  <div id="js-modal" class="modal">
+    <div class="modal__bg js-modal-close"></div>
+    <div class="modal__content">
+      <div id="js-modal-data"></div> 
+      <button type="button" class="modal__close-btn js-modal-close">閉じる</button>
+    </div>
+  </div>
 
-		<!-- フッターのサイトマップアコーディオン：スマホ表示のみ閉じておくためのJS -->
-		<script>
-			if (window.innerWidth <= 767) {
-				document.querySelectorAll('.footer__accordion').forEach(el => el.removeAttribute('open'));
-			}
-		</script>
+  <script src="../js/hamburger.js"></script>
+  <script src="../js/smart-header.js"></script>
 
-	</footer>
+  <script>
+    // スマホ時にフッターアコーディオンを閉じる
+    if (window.innerWidth <= 767) {
+      document.querySelectorAll('.footer__accordion').forEach(el => el.removeAttribute('open'));
+    }
+
+    // プライバシーポリシーのモーダル制御
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('js-modal');
+      const openBtn = document.getElementById('js-modal-open');
+      const closeElements = document.querySelectorAll('.js-modal-close');
+      const dataContainer = document.getElementById('js-modal-data');
+
+      if (!openBtn || !modal) return;
+
+      openBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // 新規タブ移動を阻止
+        
+        // 未読み込みならデータを取得
+        if (dataContainer.getAttribute('data-loaded') !== 'true') {
+          dataContainer.innerHTML = '<p style="text-align:center; padding:20px;">読み込み中...</p>';
+          fetch('../privacy.html')
+            .then(response => {
+              if (!response.ok) throw new Error('読み込み失敗');
+              return response.text();
+            })
+            .then(html => {
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(html, 'text/html');
+              const content = doc.querySelector('.privacy-policy');
+              if (content) {
+                dataContainer.innerHTML = '';
+                dataContainer.appendChild(content);
+                dataContainer.setAttribute('data-loaded', 'true');
+              } else {
+                dataContainer.innerHTML = html;
+              }
+            })
+            .catch(() => {
+              dataContainer.innerHTML = '<p style="padding:20px;">ポリシーを表示できません。直接<a href="../privacy.html" target="_blank">こちら</a>からご確認ください。</p>';
+            });
+        }
+        modal.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      // モーダルを閉じる
+      closeElements.forEach(el => {
+        el.addEventListener('click', () => {
+          modal.classList.remove('is-active');
+          document.body.style.overflow = '';
+        });
+      });
+    });
+  </script>
 </body>
 </html>

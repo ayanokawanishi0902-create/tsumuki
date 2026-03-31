@@ -95,7 +95,7 @@
 			<div class="form-agreement">
 				<input type="checkbox" id="agree" name="同意" required>
 				<label for="agree">
-					<a href="privacy.html" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>に同意する
+					<a href="../privacy.html" id="js-modal-open" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>に同意する
 				</label>
 			</div>
 						
@@ -186,19 +186,73 @@
 			</div>
 
 		</div>	<!--/.footer-container-->
+  </footer>
 
-		
-		<!-- ********************JavaScript******************** -->
-		<script src="../js/hamburger.js"></script>
-		<script src="../js/smart-header.js"></script>
+  <div id="js-modal" class="modal">
+    <div class="modal__bg js-modal-close"></div>
+    <div class="modal__content">
+      <div id="js-modal-data"></div> 
+      <button type="button" class="modal__close-btn js-modal-close">閉じる</button>
+    </div>
+  </div>
 
-		<!-- フッターのサイトマップアコーディオン：スマホ表示のみ閉じておくためのJS -->
-		<script>
-			if (window.innerWidth <= 767) {
-				document.querySelectorAll('.footer__accordion').forEach(el => el.removeAttribute('open'));
-			}
-		</script>
+  <script src="../js/hamburger.js"></script>
+  <script src="../js/smart-header.js"></script>
 
-	</footer>
+  <script>
+    // スマホ時にフッターアコーディオンを閉じる
+    if (window.innerWidth <= 767) {
+      document.querySelectorAll('.footer__accordion').forEach(el => el.removeAttribute('open'));
+    }
+
+    // プライバシーポリシーのモーダル制御
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('js-modal');
+      const openBtn = document.getElementById('js-modal-open');
+      const closeElements = document.querySelectorAll('.js-modal-close');
+      const dataContainer = document.getElementById('js-modal-data');
+
+      if (!openBtn || !modal) return;
+
+      openBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // 新規タブ移動を阻止
+        
+        // 未読み込みならデータを取得
+        if (dataContainer.getAttribute('data-loaded') !== 'true') {
+          dataContainer.innerHTML = '<p style="text-align:center; padding:20px;">読み込み中...</p>';
+          fetch('../privacy.html')
+            .then(response => {
+              if (!response.ok) throw new Error('読み込み失敗');
+              return response.text();
+            })
+            .then(html => {
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(html, 'text/html');
+              const content = doc.querySelector('.privacy-policy');
+              if (content) {
+                dataContainer.innerHTML = '';
+                dataContainer.appendChild(content);
+                dataContainer.setAttribute('data-loaded', 'true');
+              } else {
+                dataContainer.innerHTML = html;
+              }
+            })
+            .catch(() => {
+              dataContainer.innerHTML = '<p style="padding:20px;">ポリシーを表示できません。直接<a href="../privacy.html" target="_blank">こちら</a>からご確認ください。</p>';
+            });
+        }
+        modal.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      // モーダルを閉じる
+      closeElements.forEach(el => {
+        el.addEventListener('click', () => {
+          modal.classList.remove('is-active');
+          document.body.style.overflow = '';
+        });
+      });
+    });
+  </script>
 </body>
 </html>

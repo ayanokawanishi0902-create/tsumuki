@@ -1344,6 +1344,61 @@ textarea#message {
   border-bottom: 1px solid #c8a45d;
   padding-bottom: 0.5px;
 }
+/* ---------------プライバシーポリシー（モーダル表示）--------------- */
+/* モーダル全体の重なり */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* 表示状態 */
+.modal.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 背景の暗幕 */
+.modal__bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+/* コンテンツ表示エリア */
+.modal__content {
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;
+  background: #fff;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+/* 閉じるボタン */
+.modal__close-btn {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 40px;
+  background: #f4f4f4;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.modal__close-btn:hover {
+  background: #D1E6E3;
+}
+
 /* ---------------送信ボタン---------------- */
 .submit-btn {
   display: block;

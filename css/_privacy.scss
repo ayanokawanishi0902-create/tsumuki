@@ -1,0 +1,90 @@
+.privacy-policy {
+  color: #4a4a4a; /* 真っ黒を避けて柔らかい印象に */
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+  width: 100%; /* 背景は全幅 */
+  background-color: #f9fbfb; /* ほんの少し色をつけるとおしゃれ */
+  padding: 50px 20px;
+}
+#privacy .privacy-policy {
+  margin-top: 70px;
+}
+
+.privacy-container {
+  max-width: 700px; 
+  margin: 0 auto;
+  background-color: #fff; 
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+.policy-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #333;
+}
+/* --- スマホ用の設定（画面幅 767px 以下） --- */
+@media screen and (max-width: 767px) {
+	.privacy-container {
+    padding: 20px; 
+  }
+	.policy-title {
+		margin: 30px auto;
+	}
+}
+
+.policy-lead {
+	max-width: 70ch;
+  font-size: 0.85rem;
+  line-height: 2;
+  margin: 0 auto 50px;
+  text-align: center;
+  color: #888;
+}
+.policy-item {
+  margin-bottom: 40px;
+}
+.policy-item h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+/* タイトルの前にミントグリーンの小さなドットを配置 */
+.policy-item h2::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #D1E6E3;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.policy-item p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  padding-left: 16px; /* ドットの分だけインデント */
+}
+.policy-item a {
+  color: #c8a45d;
+  text-decoration: underline;
+  transition: opacity 0.3s;
+}
+.policy-item a:hover {
+  opacity: 0.6;
+}
+.policy-footer {
+  margin-top: 80px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+  text-align: right;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+.policy-footer p {
+  margin-bottom: 4px;
+}
+
