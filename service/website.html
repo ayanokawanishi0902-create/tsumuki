@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>webサイト制作 | tsumuki-つむき-</title>
+	<title>SERVICE（webサイト制作） | tsumuki-つむき-</title>
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 	<link rel="stylesheet" href="../css/style.css">
@@ -12,10 +12,13 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		
+	<!-- FontAwesome 読み込み -->		
+		<script src="https://kit.fontawesome.com/6f34c24e6b.js" crossorigin="anonymous"></script>
 
 </head>
 
-<body id="contact">
+<body>
 	<!-- ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
 	 ヘッダー領域
 	 ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
@@ -44,75 +47,413 @@
 	</header>
 
 	<!-- ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊メイン領域＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
-<main class="">
-  <section class="p-service-mv">
-    <div class="p-service-mv__inner">
-      <h1 class="p-service-mv__title">WEBサイト制作</h1>
-    </div>
-  </section>
-	<div class="p-service-mv-description">
-    <p class="p-service-mv__lead">
-      ユーザーに想いを伝え、安心と信頼を。<br>
-      成果に寄り添うオーダーメイド制作。
-    </p>
-  </div>
+	<main id="service-website">
+		<!-- パンくずリスト（スマホ用） -->
+		<ul class="breadcrumbs-sp">
+			<li>
+				<a href="../index.html">HOME</a>
+				<span>＞</span>
+			</li>
+			<li>
+				<a href="../index.html#service">SERVICE</a>
+				<span>＞</span>
+			</li>
+			<li>
+				WEBサイト制作
+			</li>
+		</ul>			
 
-  <section class="p-service-plan">
-    <div class="swiper p-plan-swiper">
-      <div class="swiper-wrapper">
- 			<!-- ******************プラン１****************** -->       
-        <div class="swiper-slide p-plan-card">
-          <span class="p-plan-card__label">初めて・リニューアル</span>
-          <h3 class="p-plan-card__title">ライト</h3>
-          <p class="p-plan-card__price">10<span>万円〜</span></p>
-          <ul class="p-plan-card__list">
-            <li>3ページ構成</li>
-            <li>問合せフォーム</li>
-            <li>フルコーディング</li>
-            <li>レスポンシブ</li>
-            <li>基本SEO設定</li>
-            <li>運用サポート</li>
-          </ul>
-          <a href="../contact/index.html" class="c-button-gold">相談する</a>
-        </div>
+		<!-- ******************タイトルセクション****************** -->
+		<section class="service-hero-section" id="js-animation-start">
+			<!-- 見出し帯 -->
+			<div class="service-hero-left">
+				<div class="service-title-wrapper">
+					<h1 class="service-title">WEBサイト制作</h1>
+					<p class="service-subtitle">SERVICE</p>
+					<!-- パンくずリスト(PC用) -->
+					<ul class="breadcrumbs">
+						<li>
+							<a href="../index.html">HOME</a>
+							<span>＞</span>
+						</li>
+						<li>
+							<a href="../index.html#service">SERVICE</a>
+							<span>＞</span>
+						</li>
+						<li>
+							WEBサイト制作
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 画像 -->
+			<div class="service-hero-right">
+				<div class="image-item">
+					<img src="../images/mv_4000.webp" alt="webサイト制作">
+				</div>
+			</div>
+		</section>
+		<!-- タイトル下説明 -->
+		<div class="p-service-mv-description">
+			<p class="p-service-mv__lead">
+				お客様の「強み」「想い」を反映した内容とデザインで、<br class="pc-only">
+				見る人にとって「わかりやすい」「信頼できる」そんなサイトを実現します。
+			</p>
+		</div>
 
-				<!-- ******************プラン２****************** -->  
-        <div class="swiper-slide p-plan-card">
-          <span class="p-plan-card__label">一番人気！まるごとお任せ</span>
-          <h3 class="p-plan-card__title">スタンダード</h3>
-          <p class="p-plan-card__price">30<span>万円〜</span></p>
-          <ul class="p-plan-card__list">
-            <li>ライトの内容</li>
-            <li>5~10ページ構成</li>
-            <li>フルコーディング</li>
-            <li>画像素材の用意</li>
-            <li>サーバー契約代行</li>
-            <li>ドメイン契約代行</li>
-          </ul>
-          <a href="../contact/index.html" class="c-button-gold">相談する</a>
-        </div>
+		<div class="kugiri-line"></div>
+
+		<!-- ******************お悩みセクション****************** -->
+		<section class="p-trouble">
+			<div class="p-trouble__inner">
+				<h3 class="p-trouble__title">こんなお悩みありませんか？</h3>
+
+				<div class="p-trouble__user-row">
+					<div class="p-trouble__user-item active" data-index="0">
+						<img src="../images/onayami1.jpg" alt="お悩み1"> </div>
+					<div class="p-trouble__user-item" data-index="1">
+						<img src="../images/onayami2.jpg" alt="お悩み2">
+					</div>
+					<div class="p-trouble__user-item" data-index="2">
+						<img src="../images/onayami3.jpg" alt="お悩み3">
+					</div>
+					<div class="p-trouble__user-item" data-index="3">
+						<img src="../images/onayami4.jpg" alt="お悩み4">
+					</div>
+				</div>
+
+				<div class="p-trouble__bubble-container">
+					<div id="js-trouble-bubble" class="p-trouble__bubble pos-0">
+						<p id="js-trouble-text">SNSだけじゃ認知度が上がらない...自分のサイトを作りたいけど、いくらかかる？</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ******************理由・比較セクション****************** -->
+		<section class="p-hikaku">
+			<div class="p-hikaku__inner">
+				<div class="accent-green">
+					そのお悩み、今すぐ解決！
+				</div>
+				<h2>TSUMUKIが選ばれる理由</h2>
+				<p class="subtitle">REASONS</p>
+				<p class="description">
+					無料ホームページ作成ツールや他の制作会社と比べてどうなの？<br>
+					気になるサービス内容の違いを比較表としてまとめました。是非参考にしてみてください。
+				</p>
+				<!-- 比較表 -->
+				<div class="table-wrapper">
+					<table class="comparison-table">
+						<!-- テーブルヘッダー -->
+						<thead>
+							<tr>
+								<th class="label-col"></th>
+								<th class="header-green">TSUMUKI<br><span>-つむき-</span></th>
+								<th class="header-gray">無料ツール<br>（自作）</th>
+								<th class="header-lightgray">制作会社<br></th>
+								<th class="header-lightgray">制作会社<br><span>（サブスク型）</span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- １．費用 -->
+							<tr>
+								<td class="case-label">
+									<span class="case-no">REASON 1</span>
+									<span class="case-title">費用</span>
+								</td>
+								<td class="cell-highlight">
+									<span class="symbol symbol-double-circle color-orange"></span>
+									<hr class="dashed-line">
+									<p class="text bold">10万円～<br>サブスクの1年半より安い<br>さらにお得なキャンペーンも！</p>
+								</td>
+								<td class="cell-gray">
+									<span class="symbol symbol-double-circle"></span>
+									<hr class="dashed-line">
+									<p class="text">無料でできるが<br>あなたの貴重な時間や<br>人件費を割く</p>
+								</td>
+								<td class="cell-gray">
+									<span class="symbol symbol-triangle"></span>
+									<hr class="dashed-line">
+									<p class="text">5ページ構成で<br>平均60～80万</p>
+								</td>
+								<td class="cell-gray">
+									<span class="symbol symbol-circle"></span>
+									<hr class="dashed-line">
+									<p class="text">平均月額8千～1万円<br>でも数年払い続けると…？</p>
+								</td>
+							</tr>
+							<!-- ２．デザイン・ブランディング -->
+							<tr>
+								<td class="case-label">
+									<span class="case-no">REASON 2</span>
+									<span class="case-title">デザイン</span>
+								</td>
+								<td class="cell-highlight">
+									<span class="symbol symbol-double-circle color-orange"></span>
+									<hr class="dashed-line">
+									<p class="text bold">独自デザイン可能<br>フルコーディングだから<br>自由自在！</p>
+								</td>
+								<td class="cell-gray">
+									<span class="symbol symbol-triangle"></span>
+									<hr class="dashed-line">
+									<p class="text">テンプレートなので<br>独自性が出せない</p>
+								</td>
+								<td class="cell-gray">
+									<span class="symbol symbol-double-circle"></span>
+									<hr class="dashed-line">
+									<p class="text">独自デザイン可能<br>クオリティも高い</p>
+								</td>
+								<td class="cell-gray">
+									<span class="symbol symbol-triangle"></span>
+									<hr class="dashed-line">
+									<p class="text">パーツ利用（セミオーダー）<br>画像枚数など制限がある</p>
+								</td>
+							</tr>
+							<!-- ３．制作工程 -->
+							<tr>
+								<td class="case-label">
+								<span class="case-no">REASON 3</span>
+								<span class="case-title">制作納期</span>
+								</td>
+								<td class="cell-highlight">
+									<span class="symbol symbol-circle color-orange"></span>
+									<hr class="dashed-line">
+									<p class="text bold">通常1～2ヵ月</p>
+								</td>
+								<td class="cell-gray">
+									<span class="symbol symbol-question"></span>
+									<hr class="dashed-line">
+									<p class="text">作成者やツールによる。<br>完成しないことも。</p>
+								</td>
+								<td class="cell-gray">
+									<span class="symbol symbol-circle"></span>
+									<hr class="dashed-line">
+									<p class="text">1ヶ月から3ヶ月</p>
+								</td>
+								<td class="cell-gray">
+									<span class="symbol symbol-double-circle"></span>
+									<hr class="dashed-line">
+									<p class="text">2週間～1ヵ月半</p>
+								</td>
+							</tr>
+							<!-- ４．スマホ対応 -->
+							<tr>
+								<td class="case-label">
+									<span class="case-no">REASON 4</span>
+									<span class="case-title">スマホ対応</span>
+								</td>
+								<td class="cell-highlight">
+									<span class="symbol symbol-double-circle color-orange"></span>
+									<hr class="dashed-line">
+									<p class="text bold">スマホ・タブレットはもちろん<br>PCの画面幅に合わせた<br>レスポンシブ対応も標準対応</p>
+								</td>
+								<td class="cell-gray">
+									<span class="symbol symbol-triangle"></span>
+									<hr class="dashed-line">
+									<p class="text">テンプレートによる<br>細かな調整はできない</p>
+								</td>
+								<td class="cell-gray">
+									<span class="symbol symbol-double-circle"></span>
+									<hr class="dashed-line">
+									<p class="text">標準対応</p>
+								</td>
+								<td class="cell-gray">
+									<span class="symbol symbol-double-circle"></span>
+									<hr class="dashed-line">
+									<p class="text">標準対応</p>
+								</td>
+							</tr>
+							<!-- ５．サポート -->
+							<tr class="support">
+								<td class="case-label">
+									<span class="case-no">REASON 5</span>
+									<span class="case-title">サポート</span>
+								</td>
+								<td class="cell-highlight">
+									<span class="symbol symbol-double-circle color-orange"></span>
+									<hr class="dashed-line">
+									<p class="text bold">軽微な修正や画像差替えが<br>公開後3ヵ月無料！<br>運用サポートもご提案可能</p>
+								</td>
+								<td class="cell-gray">
+									<span class="symbol symbol-cross"></span>
+									<hr class="dashed-line">
+									<p class="text">すべて自己作業<br>運営の勝手な仕様変更に<br>振り回されることも…</p>
+								</td>
+								<td class="cell-gray">
+									<span class="symbol symbol-circle"></span>
+									<hr class="dashed-line">
+									<p class="text">公開後の修正は有料<br>月額3～10万で保守・運用</p>
+								</td>
+								<td class="cell-gray">
+									<span class="symbol symbol-circle"></span>
+									<hr class="dashed-line">
+									<p class="text">サブスク料金に含む<br>修正回数制限あり</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- 説明文 -->
+				<div class="p-service-mv-description">
+					<p class="p-service-mv__lead">
+						コストを抑えるためにあなたの貴重な時間を削ったり、
+						<br class="pc-only">
+						よく分からない管理費を毎月払い続けたり…
+						<br class="pc-only">
+						その必要はもうありません！	
+					</p>
+					<section class="balloon-section">
+						<div class="balloon balloon-left js-rise">
+							<p>デザインや使い勝手にはこだわりたい</p>
+						</div>
+
+						<div class="balloon balloon-right js-rise">
+							<p>でも制作会社は高すぎる！</p>
+						</div>
+					</section>
+					<p class="p-service-mv__lead">
+					そんな方は、ぜひ一度ご相談ください。
+					</p>	
+				</div>
 				
-				<!-- ******************プラン３****************** -->  
-        <div class="swiper-slide p-plan-card">
-          <span class="p-plan-card__label">ECサイト・法人様向け</span>
-          <h3 class="p-plan-card__title">プレミアム</h3>
-          <p class="p-plan-card__price">50<span>万円〜</span></p>
-          <ul class="p-plan-card__list">
-            <li>スタンダードの内容</li>
-            <li>15ページ構成以上</li>
-            <li>フルコーディング</li>
-            <li>お知らせ更新機能</li>
-            <li>内部SEO対策</li>
-            <li>アクセス解析レポート</li>
-          </ul>
-          <a href="../contact/index.html" class="c-button-gold">相談する</a>
-        </div>
+			</div>
+		</section>
 
+		<div class="kugiri-line"></div>
+
+		<!-- ******************プラン例セクション****************** -->
+		<section class="p-service-plan">
+			<h2 class="p-service-plan__title">プラン料金（一例）</h2>
+			<div class="swiper p-plan-swiper">
+				<div class="swiper-wrapper">
+				<!-- プラン１ -->       
+					<div class="swiper-slide p-plan-card">
+						<span class="p-plan-card__label">初めて・リニューアル</span>
+						<h3 class="p-plan-card__title">ライト</h3>
+						<p class="p-plan-card__price">10<span>万円〜</span></p>
+						<ul class="p-plan-card__list">
+							<li>3ページ構成</li>
+							<li>問合せフォーム</li>
+							<li>フルコーディング</li>
+							<li>レスポンシブ</li>
+							<li>基本SEO設定</li>
+							<li>運用サポート</li>
+						</ul>
+						<a href="../contact/index.html" class="c-button-gold">相談する</a>
+					</div>
+
+					<!-- プラン２ -->  
+					<div class="swiper-slide p-plan-card">
+						<span class="p-plan-card__label">一番人気！まるごとお任せ</span>
+						<h3 class="p-plan-card__title">スタンダード</h3>
+						<p class="p-plan-card__price">30<span>万円〜</span></p>
+						<ul class="p-plan-card__list">
+							<li>ライトの内容</li>
+							<li>5~10ページ構成</li>
+							<li>フルコーディング</li>
+							<li>画像素材の用意</li>
+							<li>サーバー契約代行</li>
+							<li>ドメイン契約代行</li>
+						</ul>
+						<a href="../contact/index.html" class="c-button-gold">相談する</a>
+					</div>
+					
+					<!-- プラン３ -->  
+					<div class="swiper-slide p-plan-card">
+						<span class="p-plan-card__label">ECサイト・法人様向け</span>
+						<h3 class="p-plan-card__title">プレミアム</h3>
+						<p class="p-plan-card__price">50<span>万円〜</span></p>
+						<ul class="p-plan-card__list">
+							<li>スタンダードの内容</li>
+							<li>15ページ構成以上</li>
+							<li>フルコーディング</li>
+							<li>お知らせ更新機能</li>
+							<li>内部SEO対策</li>
+							<li>アクセス解析レポート</li>
+						</ul>
+						<a href="../contact/index.html" class="c-button-gold">相談する</a>
+					</div>
+
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+
+		<!-- ******************制作ステップ****************** -->
+<section class="p-flow">
+  <div class="p-flow__inner">
+		<h2>制作のながれ</h2>
+		<p class="subtitle">PRODUCTION FLOW</p>    
+    <div class="p-flow__list">
+      <div class="p-flow__item">
+        <div class="p-flow__number">01</div>
+        <div class="p-flow__content">
+          <h3 class="p-flow__step-title">ご相談・お問合せ</h3>
+          <p class="p-flow__text">まずはお気軽にお悩みをお聞かせください。</p>
+					<div class="contact-icons">
+						<a href="../contact/index.html"><i class="fa-regular fa-envelope fa-2xl"></i></a>
+						<a href=""><i class="fa-brands fa-instagram fa-2xl"></i></a>
+						<a href=""><i class="fa-brands fa-line fa-2xl"></i></a>
+					</div>
+        </div>
       </div>
-			<div class="swiper-pagination"></div>
+
+      <div class="p-flow__item">
+        <div class="p-flow__number">02</div>
+        <div class="p-flow__content">
+          <h3 class="p-flow__step-title">ご挨拶・ヒアリング</h3>
+          <p class="p-flow__text">3日以内にご挨拶と、ご希望やお悩みの詳細をお伺いするメッセージをお送り致します。</p>
+        </div>
+      </div>
+
+      <div class="p-flow__item">
+        <div class="p-flow__number">03</div>
+        <div class="p-flow__content">
+          <h3 class="p-flow__step-title">お見積り・ご契約</h3>
+          <p class="p-flow__text">ヒアリング内容を元に、数パターンのお見積りをご提案させて頂きます。対面またはオンラインでご説明をさせて頂き、内容・金額にご納得頂けましたらご契約となります。</p>
+        </div>
+      </div>
+
+      <div class="p-flow__item">
+        <div class="p-flow__number">04</div>
+        <div class="p-flow__content">
+          <h3 class="p-flow__step-title">打ち合わせ・デザイン提案</h3>
+          <p class="p-flow__text">デザインや内容の詳細な打ち合わせを行います。完成のイメージができるデザイン原稿もご用意しますので、ご安心ください。</p>
+        </div>
+      </div>
+			
+      <div class="p-flow__item">
+        <div class="p-flow__number">05</div>
+        <div class="p-flow__content">
+          <h3 class="p-flow__step-title">コーディング・納品前チェック</h3>
+          <p class="p-flow__text">デザインが決まったらコードを書いて実際のサイトを制作していきます。納品前にご確認頂き、修正などがあればご対応致します。</p>
+        </div>
+      </div>
+			
+      <div class="p-flow__item">
+        <div class="p-flow__number">
+					<svg class="p-flow__circle-text" viewBox="0 0 100 100">
+						<path id="circlePath" d="M 50, 50 m -40, 0 a 40, 40 0 1, 1 80, 0 a 40, 40 0 1, 1 -80, 0" fill="none" />
+						<text>
+							<textPath href="#circlePath" startOffset="50%" text-anchor="middle">
+								Congratulations!
+							</textPath>
+						</text>
+					</svg>
+					06
+				</div>
+        <div class="p-flow__content">
+          <h3 class="p-flow__step-title">ご納品（公開）</h3>
+          <p class="p-flow__text">最終確認で問題がなければ、ご希望日に公開となります。3ヵ月以内の軽微な修正は無料です。Webサイトは公開がスタート。その後の管理・運用も心を込めてサポート致します。</p>
+        </div>
+      </div>
+
     </div>
-  </section>
-</main>
+  </div>
+</section>
+
+	</main>
 
 
 	<!-- ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
@@ -191,6 +532,14 @@
 		<!-- ********************JavaScript******************** -->
 		<script src="../js/hamburger.js"></script>
 		<script src="../js/smart-header.js"></script>
+		<script src="../js/fadein.js"></script>
+		<script src="../js/onayami-animation.js"></script>
+		<script src="../js/balloon-rise.js"></script>
+
+		<script src="../js/back-to-top.js"></script>
+		
+		
+	
 
 		<!-- フッターのサイトマップアコーディオン：スマホ表示のみ閉じておくためのJS -->
 		<script>
@@ -204,16 +553,45 @@
 	<!-- プランカード用JS：カルーセル -->
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script>
-			const swiper = new Swiper('.p-plan-swiper', {
-				loop: false,
-				centeredSlides: true, // 中央配置
-				slidesPerView: 1.5,   // 画面内のカードの枚数
-				spaceBetween: 20,     // カード間の隙間
-				pagination: {
-					el: '.swiper-pagination',
-					clickable: true,
-				},
-			});
+const swiper = new Swiper('.p-plan-swiper', {
+  loop: false,
+  initialSlide: 0,
+  centeredSlides: true,
+  slidesPerView: 1.3,
+  spaceBetween: 20,
+
+	// ★これを追加！クリックしたスライドを中央に移動させる
+  slideToClickedSlide: true,
+  
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  // ★ブレイクポイントは一つの { } の中にまとめます
+  breakpoints: {
+		// 530px付近：カードが横に伸びすぎないよう、表示枚数を少し増やす
+    530: {
+      slidesPerView: 1.8, 
+      spaceBetween: 10,
+    },
+
+    // 768px以上のとき（タブレット）
+    768: {
+      initialSlide: 1,
+      centeredSlides: true,
+      slidesPerView: 2.2, // 少し左右をはみ出させて中央を際立たせる
+      spaceBetween: 10,
+    },
+    // 1024px以上のとき（PC）
+    1024: {
+      initialSlide: 1,
+      centeredSlides: true,
+      slidesPerView: 3,
+      spaceBetween: 10,
+    }
+  }
+});
 	</script>
 		
 </body>

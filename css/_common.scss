@@ -164,7 +164,11 @@ header nav ul {
     height: auto;
   }
   header h1 {
-    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+    margin-bottom: 15px;
   }
   header nav ul {
     gap: 40px;
@@ -496,8 +500,8 @@ TOPページの設定ここから ==============================================
   display: block;
   opacity: 0;
   transform: scale(1.05);
-  filter: blur(5px);
-  animation: fvAppear 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  filter: blur(4px);
+  animation: fvAppear 1.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }
 
 @keyframes fvAppear { to { opacity: .9; transform: scale(1); filter: blur(0); } }
@@ -825,7 +829,7 @@ TOPページの設定ここから ==============================================
   overflow: hidden;
 }
 .inner {
-  max-width: 900px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
