@@ -1,0 +1,77 @@
+@use "common";
+
+/* 色の定義（tsumuki専用） */
+$my-mint: #D1E6E3;
+$my-kinari: #fdfaf5;
+$my-gold: #c4a45d;
+$my-gold-light: #e6d3a3;
+$my-text: #333333;
+$my-green: #66c5ba;
+
+
+.works-cat {
+	border-top: 1px solid #333;
+	margin: 30px auto;
+	width: 90%;
+	padding: 20px 0;
+}
+
+/* カテゴリーボタンの基本スタイル */
+.cat-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.works-list {
+  max-width: 1000px;
+  width: 90%;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap; /* 折り返しを許可 */
+  gap: 30px 20px;
+  justify-content: flex-start;
+}
+/* --- 実績アイテム（スマホ時：2列） --- */
+.work-item {
+/* calc( (100% - 横の隙間合計) / 列数 ) */
+  width: calc((100% - 20px) / 2); 
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+}
+/* --- タブレット・PC時：3列（768px以上など） --- */
+@media screen and (min-width: 768px) {
+  .work-item {
+    /* calc( (100% - 横の隙間合計) / 列数 ) */
+    width: calc((100% - (20px * 2)) / 3);
+  }
+}
+
+
+.term {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 500;
+  color: $my-gold;
+  background-color: #fff;
+  border: 1px solid $my-gold;
+  border-radius: 6px;
+  transition: 0.15s;
+  appearance: none;
+}
+
+/* ホバー & アクティブ（選択中）の状態 */
+.term:hover,
+.term.active {
+  background-color: #333;
+	border-color: #333;
+  color: #fff;
+}
+
+
+/* 非表示にする時のクラス */
+.is-hide {
+  display: none;
+}

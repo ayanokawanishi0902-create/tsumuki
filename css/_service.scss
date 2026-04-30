@@ -20,7 +20,7 @@ $my-green: #66c5ba;
 /* -------------------------------------------
   メインビジュアル
 ------------------------------------------- */
-.service-hero-section {
+.xxx-hero-section {
   padding-top: 70px;
   display: flex;
   align-items: center; 
@@ -30,7 +30,7 @@ $my-green: #66c5ba;
   position: relative;
 }
 /* 白い帯：画像の背面 */
-.service-hero-left {
+.xxx-hero-left {
   position: absolute;
   top: 50%;
   left: 0;
@@ -46,7 +46,7 @@ $my-green: #66c5ba;
   clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%); 
 }
 /* アニメーション：左からスライド */
-.is-active .service-hero-left {
+.is-active .xxx-hero-left {
   animation: barRight 0.8s cubic-bezier(0.7, 0, 0.3, 1) forwards;
   animation-delay: 0.4s;
 }
@@ -54,7 +54,7 @@ $my-green: #66c5ba;
   to { transform: translate(0, -50%); } /* 中央位置で止まる */
 }
 /* 右側の画像：帯の前面 */
-.service-hero-right {
+.xxx-hero-right {
   position: absolute;
   right: 0;
   top: 45%;
@@ -92,8 +92,8 @@ $my-green: #66c5ba;
   animation-delay: 0.1s;
 }
 /* テキスト：下から上へ */
-.service-title-wrapper { overflow: hidden; }
-.service-title {
+.xxx-title-wrapper { overflow: hidden; }
+.xxx-title {
   color: #333;
   font-size: clamp(25px, 3.5vw, 50px);
   line-height: 1;
@@ -101,7 +101,7 @@ $my-green: #66c5ba;
   opacity: 0;
   transform: translateY(100%);
 }
-.service-subtitle {
+.xxx-subtitle {
   color: $my-gold;
   font-size: 14px;
   letter-spacing: 0.2em;
@@ -109,11 +109,11 @@ $my-green: #66c5ba;
   transform: translateY(100%);
 }
 
-.is-active .service-title {
+.is-active .xxx-title {
   animation: textUp 1s cubic-bezier(0.2, 1, 0.3, 1) forwards;
   animation-delay: 1.2s; /* 帯が到着する頃に表示 */
 }
-.is-active .service-subtitle {
+.is-active .xxx-subtitle {
   animation: textUp 1s cubic-bezier(0.2, 1, 0.3, 1) forwards;
   animation-delay: 1.2s;
 }
@@ -147,16 +147,16 @@ a:hover {
 
 /*----------メディアクエリ：パンくずリストの表示切替と画像の重なり調整----------  */
 @media (min-width: 650px) and (max-width:800px) {
-  .service-hero-section {
+  .xxx-hero-section {
     padding-top: 100px;
     height: 70vh;
   }
-  .service-hero-left {
+  .xxx-hero-left {
     height: 200px;
     top: 60%;
     padding-top: 35px ;
   }
-  .service-hero-right {
+  .xxx-hero-right {
     top: 50%;
   }
   .breadcrumbs {
@@ -177,16 +177,16 @@ a:hover {
   .breadcrumbs-sp span {
   margin: 0 .5rem;
   }
-  .service-hero-section {
+  .xxx-hero-section {
     padding-top: 20px;
     height: 45vh;
   }
-  .service-hero-left {
+  .xxx-hero-left {
     height: 150px;
     top: 30%;
     padding-top: 35px ;
   }
-  .service-hero-right {
+  .xxx-hero-right {
     top: 40%;
     width: 65%;
     height: 100%;
@@ -203,7 +203,7 @@ a:hover {
   .breadcrumbs-sp {
     margin-top: 120px;
   }
-  .service-hero-right {
+  .xxx-hero-right {
     top: 55%;
     width: 65%;
     height: 100%;
@@ -213,7 +213,7 @@ a:hover {
   .breadcrumbs-sp {
     margin-top: 80px;
   }
-  .service-hero-right {
+  .xxx-hero-right {
     top: 55%;
   }
 }
@@ -734,7 +734,7 @@ a:hover {
 
 
 /* ------------------------------------------
-  制作フローセクション
+  制作のながれセクション
 ------------------------------------------ */
 .p-flow {
   padding: 100px 20px;
@@ -806,8 +806,19 @@ a:hover {
   margin-left: 30px;
   max-width: 400px;
 }
-// ドットのライン
-/* 共通：ドットのスタイル */
+.p-flow__step-title {
+  margin-top: 80px;
+}
+.contact-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 5px;
+}
+.contact-icons i {
+  color: $my-green;
+}
+
+/* ドットのライン */
 .p-flow__item:not(:last-child)::before,
 .p-flow__item:not(:last-child)::after {
   content: "";
@@ -852,17 +863,7 @@ a:hover {
   width: calc(100% - 600px) !important;
   top: calc(50px + 100% + 10px); 
 }
-.p-flow__step-title {
-  margin-top: 80px;
-}
-.contact-icons {
-  margin-top: 20px;
-  display: flex;
-  gap: 5px;
-}
-.contact-icons i {
-  color: $my-green;
-}
+
 /*-------------メディアクエリ：タブレット以下-------------  */
 @media (max-width: 768px) {
   .p-flow__item, .p-flow__item:nth-child(even) {
@@ -888,5 +889,16 @@ a:hover {
     pointer-events: none;
     animation: rotate-anim 10s linear infinite;
   }
-
+}
+@media (max-width: 500px) {
+  .p-flow {
+    padding: 50px 20px 80px;
+  }
+  .p-flow__step-title {
+    margin-top: 50px;
+  }
+  .p-flow__text {
+    margin-top: 15px;
+    font-size: 14px;
+  }
 }

@@ -34,7 +34,8 @@ $my-gold-light: #e6d3a3;
 		p {
 			width: 80%;
 			text-align: center;
-			margin-bottom: 10px;
+			margin-bottom: 20px;
+      line-height: 1.5;
 		}
 
 		p.jouken {
@@ -64,6 +65,7 @@ $my-gold-light: #e6d3a3;
 		text-align: end;
 		padding: 5px 30px 30px;
 		font-size: small;
+    margin-right: 20px;
 	}
 }
 /* 価格エリアの調整 */
