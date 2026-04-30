@@ -290,6 +290,7 @@ a:hover {
     overflow: hidden;
     border: .5px solid $my-gold;
     padding: 3px;
+    box-sizing: border-box;
     transition: all 0.5s ease;
     filter: grayscale(100%);
     opacity: 0.4;
@@ -499,7 +500,7 @@ a:hover {
   max-width: 80%;
   padding: 30px;
   background: #fff;
-  border-radius: 50px;
+  border-radius: 45px;
   position: relative;
 }
 /* 吹き出しの角（共通） */
@@ -520,8 +521,8 @@ a:hover {
   margin-right: auto;
 }
 .balloon-left::before {
-  left: 40px; // 角の位置
-  bottom: -15px; // 下に突き出る
+  left: 43px; // 角の位置
+  bottom: -13px; // 下に突き出る
   border-width: 15px 15px 0 0; // 三角形
   border-color: #fff transparent transparent transparent; // 色
 }
@@ -531,8 +532,8 @@ a:hover {
   margin-top: 20px;
 }
 .balloon-right::before {
-  right: 40px;
-  bottom: -15px;
+  right: 43px;
+  bottom: -13px;
   border-width: 0 15px 15px 0;
   border-color: transparent #fff transparent transparent;
 }

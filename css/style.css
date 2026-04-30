@@ -1966,6 +1966,7 @@ a:hover {
   overflow: hidden;
   border: 0.5px solid #c4a45d;
   padding: 3px;
+  box-sizing: border-box;
   transition: all 0.5s ease;
   filter: grayscale(100%);
   opacity: 0.4;
@@ -2255,7 +2256,7 @@ a:hover {
   max-width: 80%;
   padding: 30px;
   background: #fff;
-  border-radius: 50px;
+  border-radius: 45px;
   position: relative;
 }
 
@@ -2280,8 +2281,8 @@ a:hover {
 }
 
 .balloon-left::before {
-  left: 40px;
-  bottom: -15px;
+  left: 43px;
+  bottom: -13px;
   border-width: 15px 15px 0 0;
   border-color: #fff transparent transparent transparent;
 }
@@ -2293,8 +2294,8 @@ a:hover {
 }
 
 .balloon-right::before {
-  right: 40px;
-  bottom: -15px;
+  right: 43px;
+  bottom: -13px;
   border-width: 0 15px 15px 0;
   border-color: transparent #fff transparent transparent;
 }
